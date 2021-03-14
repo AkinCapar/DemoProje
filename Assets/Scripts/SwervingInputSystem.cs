@@ -5,11 +5,11 @@ using UnityEngine;
 public class SwervingInputSystem : MonoBehaviour
 {
     private float lastFrameFingerPositionX;
-    private float moveFactorX ;
+    private float moveFactorX;
     public float MoveFactorX => moveFactorX;
-    public float runSpeed = 1f;
+    [SerializeField] float runSpeed = 1f;
+    [SerializeField] float rotationSpeed = 1f;
     Animator myAnimator;
-
 
     private void Start()
     {
@@ -30,6 +30,8 @@ public class SwervingInputSystem : MonoBehaviour
             moveFactorX = Input.mousePosition.x - lastFrameFingerPositionX;
             transform.position += transform.forward * Time.deltaTime * runSpeed;
             lastFrameFingerPositionX = Input.mousePosition.x;
+            float h = rotationSpeed * Input.GetAxis("Mouse X");
+            transform.Rotate(0, h, 0);
 
         }
 
