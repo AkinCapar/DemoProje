@@ -5,7 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] Vector3 startPoint;
-    
+    [SerializeField] Vector3 paintingPoint;
+    [SerializeField] GameObject mainCamera;
+    [SerializeField] GameObject paintingCamera;
 
     // Start is called before the first frame update
     void Start()
@@ -25,5 +27,16 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3 (startPoint.x, startPoint.y, startPoint.z);
         }
+
+        if(collision.gameObject.tag == "FinishZone")
+        {
+            GetComponent<SwerveMovement>().enabled = false;
+            GetComponent<SwervingInputSystem>().enabled = false;
+          //  GetComponent<Paintable>().enabled = true;
+            mainCamera.SetActive(false);
+            paintingCamera.SetActive(true);
+            transform.position = new Vector3(paintingPoint.x, paintingPoint.y, paintingPoint.z);
+        }
     }
+
 }

@@ -7,6 +7,7 @@ TagManager:
   - Obstacle
   - FinishZone
   - PaintingPlane
+  - PlayerBoy
   layers:
   - Default
   - TransparentFX
