@@ -32,7 +32,6 @@ public class Player : MonoBehaviour
         {
             GetComponent<SwerveMovement>().enabled = false;
             GetComponent<SwervingInputSystem>().enabled = false;
-          //  GetComponent<Paintable>().enabled = true;
             mainCamera.SetActive(false);
             paintingCamera.SetActive(true);
             transform.position = new Vector3(paintingPoint.x, paintingPoint.y, paintingPoint.z);
