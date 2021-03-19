@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] Vector3 paintingPoint;
     [SerializeField] GameObject mainCamera;
     [SerializeField] GameObject paintingCamera;
+    [SerializeField] GameObject paintingPlane;
 
     // Start is called before the first frame update
     void Start()
@@ -32,9 +33,12 @@ public class Player : MonoBehaviour
         {
             GetComponent<SwerveMovement>().enabled = false;
             GetComponent<SwervingInputSystem>().enabled = false;
+            paintingPlane.GetComponent<Paintable>().enabled = true;
             mainCamera.SetActive(false);
             paintingCamera.SetActive(true);
             transform.position = new Vector3(paintingPoint.x, paintingPoint.y, paintingPoint.z);
+            Time.timeScale = 0f;
+
         }
     }
 

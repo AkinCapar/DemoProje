@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4717676696445016080}
   m_Layer: 0
   m_Name: Brush
-  m_TagString: Untagged
+  m_TagString: brush
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 6788316068356639050}
   m_LocalRotation: {x: -0.52776814, y: 0.47059625, z: 0.52776814, w: 0.47059625}
   m_LocalPosition: {x: -0.2, y: 2.599, z: 157.293}
-  m_LocalScale: {x: 0.043752756, y: 0.04385747, z: 0.031398416}
+  m_LocalScale: {x: 0.005458925, y: 0.00547199, z: 0.003917504}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

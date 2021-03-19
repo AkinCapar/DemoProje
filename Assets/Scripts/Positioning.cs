@@ -71,17 +71,17 @@ public class Positioning : MonoBehaviour
 
         if (position == 8)
         {
-            positionText.GetComponent<Text>().text = "3th";
+            positionText.GetComponent<Text>().text = "3rd";
         }
 
         if (position == 9)
         {
-            positionText.GetComponent<Text>().text = "2th";
+            positionText.GetComponent<Text>().text = "2nd";
         }
 
         if (position == 10)
         {
-            positionText.GetComponent<Text>().text = "1th";
+            positionText.GetComponent<Text>().text = "1st";
         }
     }    
 }

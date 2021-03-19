@@ -9,7 +9,6 @@ public class Opponent : MonoBehaviour
     public NavMeshAgent opponent;
     Animator myAnimator;
     [SerializeField] Vector3 startPoint;
-
     private void Start()
     {
         myAnimator = GetComponent<Animator>();
@@ -45,7 +44,8 @@ public class Opponent : MonoBehaviour
 
         if (collision.gameObject.tag == "FinishZone")
         {
-            Time.timeScale = 0f;
+
+            FindObjectOfType<SceneLoader>().ActivateLoseCanvas();
         }
 
     }
