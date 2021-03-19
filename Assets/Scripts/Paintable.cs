@@ -46,7 +46,7 @@ public class Paintable : MonoBehaviour
                 {
                     if (hit.collider.gameObject.tag == "PaintingPlane" && paintPercentage < 100)
                     {
-                        var paint = Instantiate(brush, hit.point + Vector3.back * brushAdjust, Quaternion.Euler(-90f, 0f, 0f), transform);
+                        var paint =  Instantiate(brush, hit.point + Vector3.back * brushAdjust, Quaternion.Euler(-90f, 0f, 0f), transform);
                         paint.transform.localScale = Vector3.one * brushSize;
                     }
 
